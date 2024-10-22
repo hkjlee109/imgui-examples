@@ -11,25 +11,17 @@
 - (id)init {
     self = [super init];
     if(self) {
-        NSPanel* panel = [
-            [NSPanel alloc]
-            initWithContentRect:NSZeroRect
-            styleMask: NSWindowStyleMaskTitled | NSWindowStyleMaskClosable | NSWindowStyleMaskResizable
-            backing:NSBackingStoreBuffered
-            defer:YES
-        ];
+        self.window = [[NSWindow alloc] initWithContentRect:NSZeroRect
+                                                  styleMask:NSWindowStyleMaskTitled |
+                                                            NSWindowStyleMaskClosable |
+                                                            NSWindowStyleMaskResizable |
+                                                            NSWindowStyleMaskMiniaturizable
+                                                    backing:NSBackingStoreBuffered
+                                                      defer:NO];
         
-        panel.floatingPanel = YES;
-        panel.titlebarAppearsTransparent = YES;
-        [panel setFrame:NSMakeRect(0, 0, 1200, 720) display:YES animate:NO];
-        
-        ViewController* controller = [ViewController new];
-
-        [panel setContentViewController:controller];
-        [panel setRestorable:NO];
-        [panel center];
-        
-        self.window = panel;
+        self.window.contentViewController =  [ViewController new];
+        [self.window center];
+        [self.window makeKeyAndOrderFront:self];
     }
     return self;
 }

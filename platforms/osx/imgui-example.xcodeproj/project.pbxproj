@@ -15,6 +15,7 @@
 		BF367B822CC6A722005FBC11 /* imgui_impl_metal.mm in Sources */ = {isa = PBXBuildFile; fileRef = BF367A5F2CC6A722005FBC11 /* imgui_impl_metal.mm */; };
 		BF367B932CC6A722005FBC11 /* imgui_impl_osx.mm in Sources */ = {isa = PBXBuildFile; fileRef = BF367A662CC6A722005FBC11 /* imgui_impl_osx.mm */; };
 		BF367C182CC6B037005FBC11 /* GameController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF367C172CC6B037005FBC11 /* GameController.framework */; };
+		BF367D1E2CC708A1005FBC11 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF367D1D2CC708A1005FBC11 /* MetalKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		BF367B4C2CC6A722005FBC11 /* imstb_textedit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = imstb_textedit.h; sourceTree = "<group>"; };
 		BF367B4D2CC6A722005FBC11 /* imstb_truetype.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = imstb_truetype.h; sourceTree = "<group>"; };
 		BF367C172CC6B037005FBC11 /* GameController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameController.framework; path = System/Library/Frameworks/GameController.framework; sourceTree = SDKROOT; };
+		BF367D1D2CC708A1005FBC11 /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -51,6 +53,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF367C182CC6B037005FBC11 /* GameController.framework in Frameworks */,
+				BF367D1E2CC708A1005FBC11 /* MetalKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,6 +120,7 @@
 		BF367C162CC6B037005FBC11 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BF367D1D2CC708A1005FBC11 /* MetalKit.framework */,
 				BF367C172CC6B037005FBC11 /* GameController.framework */,
 			);
 			name = Frameworks;
