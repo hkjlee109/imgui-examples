@@ -1,14 +1,22 @@
 #import "ViewController.h"
 #import <MetalKit/MetalKit.h>
 
-#include "imgui.h"
 #include "imgui_impl_metal.h"
 #include "imgui_impl_osx.h"
 
-@interface ViewController () <MTKViewDelegate>
+#include "gui_main_window.hpp"
 
-@property (nonatomic, strong) id <MTLDevice> device;
-@property (nonatomic, strong) id <MTLCommandQueue> commandQueue;
+#include <memory>
+
+@interface ViewController () <MTKViewDelegate> {
+    
+    std::unique_ptr<gui::gui_main_window> _main_window;
+    bool _open_main_window;
+    
+}
+
+@property (nonatomic, strong) id<MTLDevice> device;
+@property (nonatomic, strong) id<MTLCommandQueue> commandQueue;
 
 @end
 
@@ -82,11 +90,18 @@
     ImGui_ImplOSX_NewFrame(view);
     ImGui::NewFrame();
     
+    static bool show_main_window = true;
     static ImVec4 clear_color = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
-
-    ImGui::Begin("Hello, world!");
-    ImGui::End();
     
+    ImGuiViewport* viewport = ImGui::GetMainViewport();
+    ImGui::SetNextWindowPos(viewport->WorkPos);
+    ImGui::SetNextWindowSize(viewport->Size);
+    ImGui::SetNextWindowViewport(viewport->ID);
+
+    _open_main_window = true;
+    _main_window = std::make_unique<gui::gui_main_window>(&_open_main_window);
+    _main_window->draw();
+
     ImGui::Render();
     ImDrawData* draw_data = ImGui::GetDrawData();
     
