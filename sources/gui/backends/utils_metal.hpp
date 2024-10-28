@@ -14,7 +14,7 @@ public:
     ImTextureID load_image(const char* filename) override;
     
 private:
-    id<MTLDevice> _device;
+    __weak id<MTLDevice> _device;
 };
 
 } // backends
