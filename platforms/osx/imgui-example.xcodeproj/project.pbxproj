@@ -17,6 +17,8 @@
 		BF367C182CC6B037005FBC11 /* GameController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF367C172CC6B037005FBC11 /* GameController.framework */; };
 		BF367D1E2CC708A1005FBC11 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF367D1D2CC708A1005FBC11 /* MetalKit.framework */; };
 		BFA340DB2CCBCCCA00ACFCEE /* gui_main_window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFA340D92CCBCCCA00ACFCEE /* gui_main_window.cpp */; };
+		BFA340DF2CCF9A6200ACFCEE /* gui_widgets.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFA340DE2CCF9A6200ACFCEE /* gui_widgets.cpp */; };
+		BFA340E32CCF9DC800ACFCEE /* gui_main_menu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFA340E22CCF9DC800ACFCEE /* gui_main_menu.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,7 +41,11 @@
 		BF367C172CC6B037005FBC11 /* GameController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameController.framework; path = System/Library/Frameworks/GameController.framework; sourceTree = SDKROOT; };
 		BF367D1D2CC708A1005FBC11 /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
 		BFA340D92CCBCCCA00ACFCEE /* gui_main_window.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = gui_main_window.cpp; sourceTree = "<group>"; };
-		BFA340DC2CCBD97700ACFCEE /* gui_main_window.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = gui_main_window.hpp; sourceTree = "<group>"; };
+		BFA340DC2CCBD97700ACFCEE /* gui_widgets.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = gui_widgets.hpp; path = ../gui_widgets.hpp; sourceTree = "<group>"; };
+		BFA340DD2CCF9A6000ACFCEE /* gui_main_window.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = gui_main_window.hpp; sourceTree = "<group>"; };
+		BFA340DE2CCF9A6200ACFCEE /* gui_widgets.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = gui_widgets.cpp; path = ../gui_widgets.cpp; sourceTree = "<group>"; };
+		BFA340E12CCF9DC600ACFCEE /* gui_main_menu.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = gui_main_menu.hpp; sourceTree = "<group>"; };
+		BFA340E22CCF9DC800ACFCEE /* gui_main_menu.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = gui_main_menu.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -133,12 +139,24 @@
 		BFA340DA2CCBCCCA00ACFCEE /* sources */ = {
 			isa = PBXGroup;
 			children = (
-				BFA340DC2CCBD97700ACFCEE /* gui_main_window.hpp */,
+				BFA340E02CCF9B5800ACFCEE /* widgets */,
+				BFA340E12CCF9DC600ACFCEE /* gui_main_menu.hpp */,
+				BFA340E22CCF9DC800ACFCEE /* gui_main_menu.cpp */,
+				BFA340DD2CCF9A6000ACFCEE /* gui_main_window.hpp */,
 				BFA340D92CCBCCCA00ACFCEE /* gui_main_window.cpp */,
 			);
 			name = sources;
 			path = "/Users/kyung/git/imgui-examples/sources";
 			sourceTree = "<absolute>";
+		};
+		BFA340E02CCF9B5800ACFCEE /* widgets */ = {
+			isa = PBXGroup;
+			children = (
+				BFA340DC2CCBD97700ACFCEE /* gui_widgets.hpp */,
+				BFA340DE2CCF9A6200ACFCEE /* gui_widgets.cpp */,
+			);
+			path = widgets;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -215,8 +233,10 @@
 			files = (
 				BF367B602CC6A722005FBC11 /* imgui_draw.cpp in Sources */,
 				BF367B702CC6A722005FBC11 /* imgui_demo.cpp in Sources */,
+				BFA340E32CCF9DC800ACFCEE /* gui_main_menu.cpp in Sources */,
 				BFA340DB2CCBCCCA00ACFCEE /* gui_main_window.cpp in Sources */,
 				BF367B722CC6A722005FBC11 /* imgui_tables.cpp in Sources */,
+				BFA340DF2CCF9A6200ACFCEE /* gui_widgets.cpp in Sources */,
 				BF367B772CC6A722005FBC11 /* imgui_widgets.cpp in Sources */,
 				BF367B782CC6A722005FBC11 /* imgui.cpp in Sources */,
 				BF367B822CC6A722005FBC11 /* imgui_impl_metal.mm in Sources */,

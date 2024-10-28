@@ -1,7 +1,6 @@
 #pragma once
 
-namespace gui
-{
+namespace gui {
 
 class gui_main_window
 {
