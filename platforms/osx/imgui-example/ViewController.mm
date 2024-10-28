@@ -33,16 +33,8 @@
     ImGuiIO& io = ImGui::GetIO(); (void)io;
     io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;
     io.ConfigFlags |= ImGuiConfigFlags_NavEnableGamepad;
-    io.ConfigFlags |= ImGuiConfigFlags_DockingEnable;
-    io.ConfigFlags |= ImGuiConfigFlags_ViewportsEnable;
     
     ImGui::StyleColorsDark();
-    
-    ImGuiStyle& style = ImGui::GetStyle();
-    if(io.ConfigFlags & ImGuiConfigFlags_ViewportsEnable) {
-        style.WindowRounding = 0.0f;
-        style.Colors[ImGuiCol_WindowBg].w = 1.0f;
-    }
     
     ImGui_ImplMetal_Init(self.metalLayer.device);
     
@@ -58,7 +50,7 @@
 }
 
 - (void)loadView {
-    self.view = [[MTKView alloc] initWithFrame:CGRectMake(0, 0, 360, 240)];
+    self.view = [[MTKView alloc] initWithFrame:CGRectMake(0, 0, 720, 480)];
 }
 
 - (void)viewDidLoad {
@@ -92,12 +84,11 @@
     
     static bool show_main_window = true;
     static ImVec4 clear_color = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
-    
+
     ImGuiViewport* viewport = ImGui::GetMainViewport();
     ImGui::SetNextWindowPos(viewport->WorkPos);
     ImGui::SetNextWindowSize(viewport->Size);
-    ImGui::SetNextWindowViewport(viewport->ID);
-
+    
     _open_main_window = true;
     _main_window = std::make_unique<gui::gui_main_window>(&_open_main_window);
     _main_window->draw();
@@ -120,12 +111,6 @@
 
     [commandBuffer presentDrawable:view.currentDrawable];
     [commandBuffer commit];
-
-    if (io.ConfigFlags & ImGuiConfigFlags_ViewportsEnable)
-    {
-        ImGui::UpdatePlatformWindows();
-        ImGui::RenderPlatformWindowsDefault();
-    }
 }
 
 - (void)mtkView:(nonnull MTKView *)view drawableSizeWillChange:(CGSize)size {
