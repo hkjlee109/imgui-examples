@@ -1,16 +1,18 @@
 #import "ViewController.h"
 #import <MetalKit/MetalKit.h>
 
-#include "imgui_impl_metal.h"
-#include "imgui_impl_osx.h"
+#include "imgui/backends/imgui_impl_metal.h"
+#include "imgui/backends/imgui_impl_osx.h"
 
-#include "gui_main_window.hpp"
+#include "gui/main_window.hpp"
+#include "gui/backends/utils_metal.hpp"
 
 #include <memory>
 
 @interface ViewController () <MTKViewDelegate> {
     
-    std::unique_ptr<gui::gui_main_window> _main_window;
+    std::unique_ptr<gui::main_window> _main_window;
+    std::unique_ptr<gui::backends::utils_metal> _utils;
     bool _open_main_window;
     
 }
@@ -61,6 +63,11 @@
     self.mtkView.preferredFramesPerSecond = 7;
     
     ImGui_ImplOSX_Init(self.view);
+    
+    _open_main_window = true;
+    _main_window = std::make_unique<gui::main_window>(&_open_main_window);
+    
+    _utils = std::make_unique<gui::backends::utils_metal>(self.device);
 }
 
 - (void)drawInMTKView:(nonnull MTKView *)view {
@@ -82,15 +89,12 @@
     ImGui_ImplOSX_NewFrame(view);
     ImGui::NewFrame();
     
-    static bool show_main_window = true;
     static ImVec4 clear_color = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
 
     ImGuiViewport* viewport = ImGui::GetMainViewport();
     ImGui::SetNextWindowPos(viewport->WorkPos);
     ImGui::SetNextWindowSize(viewport->Size);
     
-    _open_main_window = true;
-    _main_window = std::make_unique<gui::gui_main_window>(&_open_main_window);
     _main_window->draw();
 
     ImGui::Render();

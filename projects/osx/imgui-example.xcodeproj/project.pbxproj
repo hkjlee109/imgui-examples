@@ -16,9 +16,11 @@
 		BF367B932CC6A722005FBC11 /* imgui_impl_osx.mm in Sources */ = {isa = PBXBuildFile; fileRef = BF367A662CC6A722005FBC11 /* imgui_impl_osx.mm */; };
 		BF367C182CC6B037005FBC11 /* GameController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF367C172CC6B037005FBC11 /* GameController.framework */; };
 		BF367D1E2CC708A1005FBC11 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF367D1D2CC708A1005FBC11 /* MetalKit.framework */; };
-		BFA340DB2CCBCCCA00ACFCEE /* gui_main_window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFA340D92CCBCCCA00ACFCEE /* gui_main_window.cpp */; };
-		BFA340DF2CCF9A6200ACFCEE /* gui_widgets.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFA340DE2CCF9A6200ACFCEE /* gui_widgets.cpp */; };
-		BFA340E32CCF9DC800ACFCEE /* gui_main_menu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFA340E22CCF9DC800ACFCEE /* gui_main_menu.cpp */; };
+		BFA341102CCFCDD900ACFCEE /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = BFA3410D2CCFCDD900ACFCEE /* home.png */; };
+		BFA3413F2CCFE8A100ACFCEE /* gui_widgets.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFA341372CCFE8A000ACFCEE /* gui_widgets.cpp */; };
+		BFA341402CCFE8A100ACFCEE /* main_menu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFA3413A2CCFE8A000ACFCEE /* main_menu.cpp */; };
+		BFA341412CCFE8A100ACFCEE /* main_window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFA3413C2CCFE8A000ACFCEE /* main_window.cpp */; };
+		BFA341422CCFE8A100ACFCEE /* utils_metal.mm in Sources */ = {isa = PBXBuildFile; fileRef = BFA341342CCFE8A000ACFCEE /* utils_metal.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,12 +42,16 @@
 		BF367B4D2CC6A722005FBC11 /* imstb_truetype.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = imstb_truetype.h; sourceTree = "<group>"; };
 		BF367C172CC6B037005FBC11 /* GameController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameController.framework; path = System/Library/Frameworks/GameController.framework; sourceTree = SDKROOT; };
 		BF367D1D2CC708A1005FBC11 /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
-		BFA340D92CCBCCCA00ACFCEE /* gui_main_window.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = gui_main_window.cpp; sourceTree = "<group>"; };
-		BFA340DC2CCBD97700ACFCEE /* gui_widgets.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = gui_widgets.hpp; path = ../gui_widgets.hpp; sourceTree = "<group>"; };
-		BFA340DD2CCF9A6000ACFCEE /* gui_main_window.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = gui_main_window.hpp; sourceTree = "<group>"; };
-		BFA340DE2CCF9A6200ACFCEE /* gui_widgets.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = gui_widgets.cpp; path = ../gui_widgets.cpp; sourceTree = "<group>"; };
-		BFA340E12CCF9DC600ACFCEE /* gui_main_menu.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = gui_main_menu.hpp; sourceTree = "<group>"; };
-		BFA340E22CCF9DC800ACFCEE /* gui_main_menu.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = gui_main_menu.cpp; sourceTree = "<group>"; };
+		BFA3410D2CCFCDD900ACFCEE /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
+		BFA341322CCFE8A000ACFCEE /* utils.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = utils.hpp; sourceTree = "<group>"; };
+		BFA341332CCFE8A000ACFCEE /* utils_metal.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = utils_metal.hpp; sourceTree = "<group>"; };
+		BFA341342CCFE8A000ACFCEE /* utils_metal.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = utils_metal.mm; sourceTree = "<group>"; };
+		BFA341362CCFE8A000ACFCEE /* gui_widgets.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = gui_widgets.hpp; sourceTree = "<group>"; };
+		BFA341372CCFE8A000ACFCEE /* gui_widgets.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = gui_widgets.cpp; sourceTree = "<group>"; };
+		BFA341392CCFE8A000ACFCEE /* main_menu.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = main_menu.hpp; sourceTree = "<group>"; };
+		BFA3413A2CCFE8A000ACFCEE /* main_menu.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main_menu.cpp; sourceTree = "<group>"; };
+		BFA3413B2CCFE8A000ACFCEE /* main_window.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = main_window.hpp; sourceTree = "<group>"; };
+		BFA3413C2CCFE8A000ACFCEE /* main_window.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main_window.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -75,7 +81,8 @@
 				BF3678422CC6A18F005FBC11 /* imgui-example */,
 				BF3678412CC6A18F005FBC11 /* Products */,
 				BF367B502CC6A722005FBC11 /* deps */,
-				BFA340DA2CCBCCCA00ACFCEE /* sources */,
+				BFA3410F2CCFCDD900ACFCEE /* resources */,
+				BFA3413E2CCFE8A000ACFCEE /* sources */,
 				BF367C162CC6B037005FBC11 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -136,27 +143,63 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		BFA340DA2CCBCCCA00ACFCEE /* sources */ = {
+		BFA3410E2CCFCDD900ACFCEE /* images */ = {
 			isa = PBXGroup;
 			children = (
-				BFA340E02CCF9B5800ACFCEE /* widgets */,
-				BFA340E12CCF9DC600ACFCEE /* gui_main_menu.hpp */,
-				BFA340E22CCF9DC800ACFCEE /* gui_main_menu.cpp */,
-				BFA340DD2CCF9A6000ACFCEE /* gui_main_window.hpp */,
-				BFA340D92CCBCCCA00ACFCEE /* gui_main_window.cpp */,
+				BFA3410D2CCFCDD900ACFCEE /* home.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		BFA3410F2CCFCDD900ACFCEE /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				BFA3410E2CCFCDD900ACFCEE /* images */,
+			);
+			name = resources;
+			path = "/Users/kyung/git/imgui-examples/resources";
+			sourceTree = "<absolute>";
+		};
+		BFA341352CCFE8A000ACFCEE /* backends */ = {
+			isa = PBXGroup;
+			children = (
+				BFA341322CCFE8A000ACFCEE /* utils.hpp */,
+				BFA341332CCFE8A000ACFCEE /* utils_metal.hpp */,
+				BFA341342CCFE8A000ACFCEE /* utils_metal.mm */,
+			);
+			path = backends;
+			sourceTree = "<group>";
+		};
+		BFA341382CCFE8A000ACFCEE /* widgets */ = {
+			isa = PBXGroup;
+			children = (
+				BFA341362CCFE8A000ACFCEE /* gui_widgets.hpp */,
+				BFA341372CCFE8A000ACFCEE /* gui_widgets.cpp */,
+			);
+			path = widgets;
+			sourceTree = "<group>";
+		};
+		BFA3413D2CCFE8A000ACFCEE /* gui */ = {
+			isa = PBXGroup;
+			children = (
+				BFA341352CCFE8A000ACFCEE /* backends */,
+				BFA341382CCFE8A000ACFCEE /* widgets */,
+				BFA341392CCFE8A000ACFCEE /* main_menu.hpp */,
+				BFA3413A2CCFE8A000ACFCEE /* main_menu.cpp */,
+				BFA3413B2CCFE8A000ACFCEE /* main_window.hpp */,
+				BFA3413C2CCFE8A000ACFCEE /* main_window.cpp */,
+			);
+			path = gui;
+			sourceTree = "<group>";
+		};
+		BFA3413E2CCFE8A000ACFCEE /* sources */ = {
+			isa = PBXGroup;
+			children = (
+				BFA3413D2CCFE8A000ACFCEE /* gui */,
 			);
 			name = sources;
 			path = "/Users/kyung/git/imgui-examples/sources";
 			sourceTree = "<absolute>";
-		};
-		BFA340E02CCF9B5800ACFCEE /* widgets */ = {
-			isa = PBXGroup;
-			children = (
-				BFA340DC2CCBD97700ACFCEE /* gui_widgets.hpp */,
-				BFA340DE2CCF9A6200ACFCEE /* gui_widgets.cpp */,
-			);
-			path = widgets;
-			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -221,6 +264,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFA341102CCFCDD900ACFCEE /* home.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,14 +277,15 @@
 			files = (
 				BF367B602CC6A722005FBC11 /* imgui_draw.cpp in Sources */,
 				BF367B702CC6A722005FBC11 /* imgui_demo.cpp in Sources */,
-				BFA340E32CCF9DC800ACFCEE /* gui_main_menu.cpp in Sources */,
-				BFA340DB2CCBCCCA00ACFCEE /* gui_main_window.cpp in Sources */,
 				BF367B722CC6A722005FBC11 /* imgui_tables.cpp in Sources */,
-				BFA340DF2CCF9A6200ACFCEE /* gui_widgets.cpp in Sources */,
 				BF367B772CC6A722005FBC11 /* imgui_widgets.cpp in Sources */,
 				BF367B782CC6A722005FBC11 /* imgui.cpp in Sources */,
 				BF367B822CC6A722005FBC11 /* imgui_impl_metal.mm in Sources */,
 				BF367B932CC6A722005FBC11 /* imgui_impl_osx.mm in Sources */,
+				BFA3413F2CCFE8A100ACFCEE /* gui_widgets.cpp in Sources */,
+				BFA341402CCFE8A100ACFCEE /* main_menu.cpp in Sources */,
+				BFA341412CCFE8A100ACFCEE /* main_window.cpp in Sources */,
+				BFA341422CCFE8A100ACFCEE /* utils_metal.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,12 +396,18 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/../../deps/",
+					"$(PROJECT_DIR)/../../sources/",
+				);
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 15.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "";
+				USE_HEADERMAP = NO;
 			};
 			name = Debug;
 		};
@@ -406,11 +457,17 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/../../deps/",
+					"$(PROJECT_DIR)/../../sources/",
+				);
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 15.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "";
+				USE_HEADERMAP = NO;
 			};
 			name = Release;
 		};
