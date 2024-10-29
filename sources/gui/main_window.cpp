@@ -28,13 +28,6 @@ void main_window::draw()
         static char buf1[200] = "";
         ImGui::InputText("d",     buf1, 200);
         
-//        ImGuiIO& io = ImGui::GetIO();
-//        ImTextureID my_tex_id = io.Fonts->TexID;
-//        if (ImGui::ImageButton("blah", my_tex_id, ImVec2(400, 80))) {
-////            show_another_window = false;
-//        }
-//        ImGui::SetItemDefaultFocus();
-        
         ImGui::EndChild();
     }
     

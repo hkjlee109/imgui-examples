@@ -6,13 +6,13 @@
 
 #include "gui/main_window.hpp"
 #include "gui/assets/assets_metal.hpp"
+#include "gui/assets/assets_ref.hpp"
 
 #include <memory>
 
 @interface ViewController () <MTKViewDelegate> {
     
     std::unique_ptr<gui::main_window> _main_window;
-    std::unique_ptr<gui::assets::assets_metal> _assets;
     bool _open_main_window;
     
 }
@@ -67,12 +67,14 @@
     _open_main_window = true;
     _main_window = std::make_unique<gui::main_window>(&_open_main_window);
     
-    _assets = std::make_unique<gui::assets::assets_metal>(self.device);
-    
-    _assets->load_image(
+    gui::assets::assets_metal* assets{new gui::assets::assets_metal(self.device)};
+
+    assets->load_image(
         "home",
         [[NSBundle mainBundle] pathForResource:@"home" ofType:@"png"].UTF8String
     );
+    
+    gui::assets::assets_ref assets_ref(assets);
 }
 
 - (void)drawInMTKView:(nonnull MTKView *)view {
@@ -100,21 +102,7 @@
     ImGui::SetNextWindowPos(viewport->WorkPos);
     ImGui::SetNextWindowSize(viewport->Size);
     
-//    _main_window->draw();
-
-//    NSLog(@"textureID: %llx", textureID);
-    bool open = true;
-    ImGui::Begin("main_window", &open, ImGuiWindowFlags_NoDecoration | ImGuiWindowFlags_NoResize);
-    
-    ImGui::Text("Loaded PNG:");
-    
-    ImGui::Image(_assets->get_image("home"), ImVec2(16, 16));
-
-//    if (ImGui::ImageButton("blah", textureID, ImVec2(16, 16))) {
-//        //            show_another_window = false;
-//    }
-//    
-    ImGui::End();
+    _main_window->draw();
     
     ImGui::Render();
     ImDrawData* draw_data = ImGui::GetDrawData();

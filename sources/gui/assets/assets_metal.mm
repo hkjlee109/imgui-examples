@@ -20,7 +20,8 @@ bool assets_metal::load_image(const char* key, const char* fullPath)
 
     unsigned char* data = stbi_load(fullPath, &width, &height, &numberOfChannels, 0);
     
-    if(data) {
+    if(data)
+    {
         MTLTextureDescriptor* descriptor =
             [MTLTextureDescriptor texture2DDescriptorWithPixelFormat:MTLPixelFormatRGBA8Unorm
                                                                width:width
@@ -43,7 +44,6 @@ bool assets_metal::load_image(const char* key, const char* fullPath)
     return false;
 }
 
-
 ImTextureID assets_metal::get_image(const char* key)
 {
     return (ImTextureID)_image_inventory[key];
@@ -51,4 +51,3 @@ ImTextureID assets_metal::get_image(const char* key)
 
 } // assets
 } // gui
-

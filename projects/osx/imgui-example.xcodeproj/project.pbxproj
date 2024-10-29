@@ -21,6 +21,7 @@
 		BFA344692CCFF4CD00ACFCEE /* imgui_draw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFA3424B2CCFF4CD00ACFCEE /* imgui_draw.cpp */; };
 		BFA3446D2CCFF4CD00ACFCEE /* imgui_demo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFA3424A2CCFF4CD00ACFCEE /* imgui_demo.cpp */; };
 		BFA344822CCFF4CD00ACFCEE /* imgui_widgets.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFA3424E2CCFF4CD00ACFCEE /* imgui_widgets.cpp */; };
+		BFA346EC2CD1601F00ACFCEE /* assets_ref.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFA346EB2CD1601F00ACFCEE /* assets_ref.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,8 @@
 		BFA342502CCFF4CD00ACFCEE /* imstb_textedit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = imstb_textedit.h; sourceTree = "<group>"; };
 		BFA342512CCFF4CD00ACFCEE /* imstb_truetype.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = imstb_truetype.h; sourceTree = "<group>"; };
 		BFA346882CD016AE00ACFCEE /* stb_image.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stb_image.h; sourceTree = "<group>"; };
+		BFA346EA2CD1601D00ACFCEE /* assets_ref.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = assets_ref.hpp; sourceTree = "<group>"; };
+		BFA346EB2CD1601F00ACFCEE /* assets_ref.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = assets_ref.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -128,6 +131,8 @@
 				BFA341322CCFE8A000ACFCEE /* assets.hpp */,
 				BFA341332CCFE8A000ACFCEE /* assets_metal.hpp */,
 				BFA341342CCFE8A000ACFCEE /* assets_metal.mm */,
+				BFA346EA2CD1601D00ACFCEE /* assets_ref.hpp */,
+				BFA346EB2CD1601F00ACFCEE /* assets_ref.cpp */,
 			);
 			path = assets;
 			sourceTree = "<group>";
@@ -285,6 +290,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFA346EC2CD1601F00ACFCEE /* assets_ref.cpp in Sources */,
 				BFA3413F2CCFE8A100ACFCEE /* gui_widgets.cpp in Sources */,
 				BFA341402CCFE8A100ACFCEE /* main_menu.cpp in Sources */,
 				BFA341412CCFE8A100ACFCEE /* main_window.cpp in Sources */,
