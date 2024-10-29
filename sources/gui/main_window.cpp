@@ -18,6 +18,24 @@ void main_window::draw()
         draw_main_menu();
         
         ImGui::SameLine();
+        
+        ImGui::BeginChild(
+            "ChildHeader",
+            ImVec2(100, 60),
+            ImGuiChildFlags_None,
+            ImGuiChildFlags_None);
+        
+        static char buf1[200] = "";
+        ImGui::InputText("d",     buf1, 200);
+        
+//        ImGuiIO& io = ImGui::GetIO();
+//        ImTextureID my_tex_id = io.Fonts->TexID;
+//        if (ImGui::ImageButton("blah", my_tex_id, ImVec2(400, 80))) {
+////            show_another_window = false;
+//        }
+//        ImGui::SetItemDefaultFocus();
+        
+        ImGui::EndChild();
     }
     
     ImGui::End();

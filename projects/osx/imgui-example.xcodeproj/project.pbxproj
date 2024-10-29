@@ -13,7 +13,7 @@
 		BFA3413F2CCFE8A100ACFCEE /* gui_widgets.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFA341372CCFE8A000ACFCEE /* gui_widgets.cpp */; };
 		BFA341402CCFE8A100ACFCEE /* main_menu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFA3413A2CCFE8A000ACFCEE /* main_menu.cpp */; };
 		BFA341412CCFE8A100ACFCEE /* main_window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFA3413C2CCFE8A000ACFCEE /* main_window.cpp */; };
-		BFA341422CCFE8A100ACFCEE /* utils_metal.mm in Sources */ = {isa = PBXBuildFile; fileRef = BFA341342CCFE8A000ACFCEE /* utils_metal.mm */; };
+		BFA341422CCFE8A100ACFCEE /* assets_metal.mm in Sources */ = {isa = PBXBuildFile; fileRef = BFA341342CCFE8A000ACFCEE /* assets_metal.mm */; };
 		BFA3442D2CCFF4CD00ACFCEE /* imgui.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFA342492CCFF4CD00ACFCEE /* imgui.cpp */; };
 		BFA3443E2CCFF4CD00ACFCEE /* imgui_tables.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFA3424D2CCFF4CD00ACFCEE /* imgui_tables.cpp */; };
 		BFA344462CCFF4CD00ACFCEE /* imgui_impl_osx.mm in Sources */ = {isa = PBXBuildFile; fileRef = BFA3416A2CCFF4CD00ACFCEE /* imgui_impl_osx.mm */; };
@@ -28,9 +28,9 @@
 		BF367C172CC6B037005FBC11 /* GameController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameController.framework; path = System/Library/Frameworks/GameController.framework; sourceTree = SDKROOT; };
 		BF367D1D2CC708A1005FBC11 /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
 		BFA3410D2CCFCDD900ACFCEE /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
-		BFA341322CCFE8A000ACFCEE /* utils.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = utils.hpp; sourceTree = "<group>"; };
-		BFA341332CCFE8A000ACFCEE /* utils_metal.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = utils_metal.hpp; sourceTree = "<group>"; };
-		BFA341342CCFE8A000ACFCEE /* utils_metal.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = utils_metal.mm; sourceTree = "<group>"; };
+		BFA341322CCFE8A000ACFCEE /* assets.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = assets.hpp; sourceTree = "<group>"; };
+		BFA341332CCFE8A000ACFCEE /* assets_metal.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = assets_metal.hpp; sourceTree = "<group>"; };
+		BFA341342CCFE8A000ACFCEE /* assets_metal.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = assets_metal.mm; sourceTree = "<group>"; };
 		BFA341362CCFE8A000ACFCEE /* gui_widgets.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = gui_widgets.hpp; sourceTree = "<group>"; };
 		BFA341372CCFE8A000ACFCEE /* gui_widgets.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = gui_widgets.cpp; sourceTree = "<group>"; };
 		BFA341392CCFE8A000ACFCEE /* main_menu.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = main_menu.hpp; sourceTree = "<group>"; };
@@ -122,14 +122,14 @@
 			path = "/Users/kyung/git/imgui-examples/resources";
 			sourceTree = "<absolute>";
 		};
-		BFA341352CCFE8A000ACFCEE /* backends */ = {
+		BFA341352CCFE8A000ACFCEE /* assets */ = {
 			isa = PBXGroup;
 			children = (
-				BFA341322CCFE8A000ACFCEE /* utils.hpp */,
-				BFA341332CCFE8A000ACFCEE /* utils_metal.hpp */,
-				BFA341342CCFE8A000ACFCEE /* utils_metal.mm */,
+				BFA341322CCFE8A000ACFCEE /* assets.hpp */,
+				BFA341332CCFE8A000ACFCEE /* assets_metal.hpp */,
+				BFA341342CCFE8A000ACFCEE /* assets_metal.mm */,
 			);
-			path = backends;
+			path = assets;
 			sourceTree = "<group>";
 		};
 		BFA341382CCFE8A000ACFCEE /* widgets */ = {
@@ -144,7 +144,7 @@
 		BFA3413D2CCFE8A000ACFCEE /* gui */ = {
 			isa = PBXGroup;
 			children = (
-				BFA341352CCFE8A000ACFCEE /* backends */,
+				BFA341352CCFE8A000ACFCEE /* assets */,
 				BFA341382CCFE8A000ACFCEE /* widgets */,
 				BFA341392CCFE8A000ACFCEE /* main_menu.hpp */,
 				BFA3413A2CCFE8A000ACFCEE /* main_menu.cpp */,
@@ -288,7 +288,7 @@
 				BFA3413F2CCFE8A100ACFCEE /* gui_widgets.cpp in Sources */,
 				BFA341402CCFE8A100ACFCEE /* main_menu.cpp in Sources */,
 				BFA341412CCFE8A100ACFCEE /* main_window.cpp in Sources */,
-				BFA341422CCFE8A100ACFCEE /* utils_metal.mm in Sources */,
+				BFA341422CCFE8A100ACFCEE /* assets_metal.mm in Sources */,
 				BFA3442D2CCFF4CD00ACFCEE /* imgui.cpp in Sources */,
 				BFA3443E2CCFF4CD00ACFCEE /* imgui_tables.cpp in Sources */,
 				BFA344462CCFF4CD00ACFCEE /* imgui_impl_osx.mm in Sources */,

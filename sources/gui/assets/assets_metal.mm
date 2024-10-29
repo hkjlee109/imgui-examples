@@ -1,24 +1,25 @@
-#include "utils_metal.hpp"
+#include "assets_metal.hpp"
 
 #define STB_IMAGE_IMPLEMENTATION
 #include "stb/stb_image.h"
 
 namespace gui {
-namespace backends {
+namespace assets {
 
-utils_metal::utils_metal(id<MTLDevice> device):
-    utils(),
+assets_metal::assets_metal(id<MTLDevice> device):
+    assets(),
     _device{device}
 {
 }
 
-ImTextureID utils_metal::load_image(const char* filename)
+bool assets_metal::load_image(const char* key, const char* fullPath)
 {
     int width = 0;
     int height = 0;
     int numberOfChannels = 0;
+
+    unsigned char* data = stbi_load(fullPath, &width, &height, &numberOfChannels, 0);
     
-    unsigned char* data = stbi_load(filename, &width, &height, &numberOfChannels, 0);
     if(data) {
         MTLTextureDescriptor* descriptor =
             [MTLTextureDescriptor texture2DDescriptorWithPixelFormat:MTLPixelFormatRGBA8Unorm
@@ -32,15 +33,22 @@ ImTextureID utils_metal::load_image(const char* filename)
                    mipmapLevel:0
                      withBytes:data
                    bytesPerRow:width * numberOfChannels];
-        
-        stbi_image_free(data);
 
-        return (ImTextureID)texture;
+        stbi_image_free(data);
+        _image_inventory[key] = texture;
+
+        return true;
     }
     
-    return 0;
+    return false;
 }
 
-} // backends
+
+ImTextureID assets_metal::get_image(const char* key)
+{
+    return (ImTextureID)_image_inventory[key];
+}
+
+} // assets
 } // gui
 
