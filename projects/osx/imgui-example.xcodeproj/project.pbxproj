@@ -22,6 +22,11 @@
 		BFA3446D2CCFF4CD00ACFCEE /* imgui_demo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFA3424A2CCFF4CD00ACFCEE /* imgui_demo.cpp */; };
 		BFA344822CCFF4CD00ACFCEE /* imgui_widgets.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFA3424E2CCFF4CD00ACFCEE /* imgui_widgets.cpp */; };
 		BFA346EC2CD1601F00ACFCEE /* assets_ref.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFA346EB2CD1601F00ACFCEE /* assets_ref.cpp */; };
+		BFA346EE2CD2262300ACFCEE /* chat.png in Resources */ = {isa = PBXBuildFile; fileRef = BFA346ED2CD2262300ACFCEE /* chat.png */; };
+		BFA346F02CD227AF00ACFCEE /* calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = BFA346EF2CD227AF00ACFCEE /* calendar.png */; };
+		BFA346F42CD227BA00ACFCEE /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = BFA346F32CD227BA00ACFCEE /* settings.png */; };
+		BFA346F52CD227BA00ACFCEE /* monitor.png in Resources */ = {isa = PBXBuildFile; fileRef = BFA346F12CD227BA00ACFCEE /* monitor.png */; };
+		BFA346F62CD227BA00ACFCEE /* phone.png in Resources */ = {isa = PBXBuildFile; fileRef = BFA346F22CD227BA00ACFCEE /* phone.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +61,11 @@
 		BFA346882CD016AE00ACFCEE /* stb_image.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stb_image.h; sourceTree = "<group>"; };
 		BFA346EA2CD1601D00ACFCEE /* assets_ref.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = assets_ref.hpp; sourceTree = "<group>"; };
 		BFA346EB2CD1601F00ACFCEE /* assets_ref.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = assets_ref.cpp; sourceTree = "<group>"; };
+		BFA346ED2CD2262300ACFCEE /* chat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chat.png; sourceTree = "<group>"; };
+		BFA346EF2CD227AF00ACFCEE /* calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendar.png; sourceTree = "<group>"; };
+		BFA346F12CD227BA00ACFCEE /* monitor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monitor.png; sourceTree = "<group>"; };
+		BFA346F22CD227BA00ACFCEE /* phone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = phone.png; sourceTree = "<group>"; };
+		BFA346F32CD227BA00ACFCEE /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -111,7 +121,12 @@
 		BFA3410E2CCFCDD900ACFCEE /* images */ = {
 			isa = PBXGroup;
 			children = (
+				BFA346EF2CD227AF00ACFCEE /* calendar.png */,
+				BFA346ED2CD2262300ACFCEE /* chat.png */,
 				BFA3410D2CCFCDD900ACFCEE /* home.png */,
+				BFA346F12CD227BA00ACFCEE /* monitor.png */,
+				BFA346F22CD227BA00ACFCEE /* phone.png */,
+				BFA346F32CD227BA00ACFCEE /* settings.png */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -279,7 +294,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFA346F02CD227AF00ACFCEE /* calendar.png in Resources */,
 				BFA341102CCFCDD900ACFCEE /* home.png in Resources */,
+				BFA346F42CD227BA00ACFCEE /* settings.png in Resources */,
+				BFA346F52CD227BA00ACFCEE /* monitor.png in Resources */,
+				BFA346F62CD227BA00ACFCEE /* phone.png in Resources */,
+				BFA346EE2CD2262300ACFCEE /* chat.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

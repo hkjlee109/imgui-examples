@@ -18,17 +18,6 @@ void main_window::draw()
         draw_main_menu();
         
         ImGui::SameLine();
-        
-        ImGui::BeginChild(
-            "ChildHeader",
-            ImVec2(100, 60),
-            ImGuiChildFlags_None,
-            ImGuiChildFlags_None);
-        
-        static char buf1[200] = "";
-        ImGui::InputText("d",     buf1, 200);
-        
-        ImGui::EndChild();
     }
     
     ImGui::End();

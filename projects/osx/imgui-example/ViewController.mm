@@ -70,8 +70,28 @@
     gui::assets::assets_metal* assets{new gui::assets::assets_metal(self.device)};
 
     assets->load_image(
+        "calendar",
+        [[NSBundle mainBundle] pathForResource:@"calendar" ofType:@"png"].UTF8String
+    );
+    assets->load_image(
+        "chat",
+        [[NSBundle mainBundle] pathForResource:@"chat" ofType:@"png"].UTF8String
+    );
+    assets->load_image(
         "home",
         [[NSBundle mainBundle] pathForResource:@"home" ofType:@"png"].UTF8String
+    );
+    assets->load_image(
+        "monitor",
+        [[NSBundle mainBundle] pathForResource:@"monitor" ofType:@"png"].UTF8String
+    );
+    assets->load_image(
+        "phone",
+        [[NSBundle mainBundle] pathForResource:@"phone" ofType:@"png"].UTF8String
+    );
+    assets->load_image(
+        "settings",
+        [[NSBundle mainBundle] pathForResource:@"settings" ofType:@"png"].UTF8String
     );
     
     gui::assets::assets_ref assets_ref(assets);

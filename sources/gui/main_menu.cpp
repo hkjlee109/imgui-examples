@@ -20,7 +20,47 @@ void draw_main_menu()
     if(ImGui::ImageButton(
         "home_button",
         gui::assets::assets_ref::get_instance()->get_image("home"),
-        ImVec2(24, 24)))
+        ImVec2(16, 16)))
+    {
+    }
+    
+    ImGui::Spacing();
+    
+    if(ImGui::ImageButton("chat_button",
+        gui::assets::assets_ref::get_instance()->get_image("chat"),
+        ImVec2(16, 16)))
+    {
+    }
+    
+    ImGui::Spacing();
+    
+    if(ImGui::ImageButton("phone_button",
+        gui::assets::assets_ref::get_instance()->get_image("phone"),
+        ImVec2(16, 16)))
+    {
+    }
+    
+    ImGui::Spacing();
+    
+    if(ImGui::ImageButton("calendar_button",
+        gui::assets::assets_ref::get_instance()->get_image("calendar"),
+        ImVec2(16, 16)))
+    {
+    }
+    
+    ImGui::Spacing();
+    
+    if(ImGui::ImageButton("monitor_button",
+        gui::assets::assets_ref::get_instance()->get_image("monitor"),
+        ImVec2(16, 16)))
+    {
+    }
+
+    ImGui::Dummy(ImVec2(0, 100));
+    
+    if(ImGui::ImageButton("settings_button",
+        gui::assets::assets_ref::get_instance()->get_image("settings"),
+        ImVec2(16, 16)))
     {
     }
 
